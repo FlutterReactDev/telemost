@@ -1,0 +1,855 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+   
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    
+    background:#211E27 url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    border:7px solid transparent;
+}
+
+.dannye-sl .slick-prev
+{
+    left: -10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: none !important;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 38%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+
+
+.dannye-sl .slick-next
+{
+    right: 17px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: none !important;
+    top: 50%;
+}
+
+.trebovanie-sl .slick-prev
+{
+    left: -10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: none !important;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 38%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+
+
+.trebovanie-sl .slick-next
+{
+    right: 17px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: none !important;
+    top: 50%;
+}
+
+
+
+.dannye-border-sl .slick-prev
+{
+    left: -10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: none !important;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 38%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+
+
+.dannye-border-sl .slick-next
+{
+    right: 17px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: none !important;
+    top: 50%;
+}
+
+
+
+.foto-sl .slick-prev
+{
+    left: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 45%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.foto-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.foto-sl .slick-next
+{
+    right: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: 50%;
+}
+
+.foto-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+
+.licenziya-sl .slick-prev
+{
+    left: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 45%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.licenziya-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.licenziya-sl .slick-next
+{
+    right: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: 50%;
+}
+
+.licenziya-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+
+
+
+.otziv-sl .slick-prev
+{
+    right: 79px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: -54px;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.otziv-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.otziv-sl .slick-next
+{
+    right: 15px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: -34px;
+}
+
+.otziv-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+
+.content-sl .slick-prev
+{
+    right: 72px;
+    background: #fff url(../images/slayder-arrow2.svg) 50% 50% no-repeat;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: -70px;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.content-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow2.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.content-sl .slick-next
+{
+    right: 16px;
+    background: #fff url(../images/slayder-arrow2.svg) 50% 50% no-repeat;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: -54px;
+}
+
+.content-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow2.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+
+.otziv2-sl .slick-prev
+{
+    right: 443px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: -54px;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.otziv2-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.otziv2-sl .slick-next
+{
+    right: 379px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: -34px;
+}
+
+.otziv2-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.licenziya2-sl .slick-prev
+{
+    left: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: block;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 45%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+.licenziya2-sl .slick-prev:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+.licenziya2-sl .slick-next
+{
+    right: 10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: block;
+    top: 50%;
+}
+
+.licenziya2-sl .slick-next:hover {
+    background: #fff url(../images/slayder-arrow-hv.svg) 50% 50% no-repeat;
+    border: 1px solid #1A5906;
+}
+
+
+.content-next
+{
+    right: -60px;
+    background:#211E27 url(../images/link-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    
+    height: 40px;
+    
+    transition: 0.3s;
+    border-radius: 50%;
+    border:7px solid transparent;
+}
+
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -50px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDE;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.slick-active button {
+    background: ;
+}
+
+
+
+.work-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.work-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.work-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.work-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.popular-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.popular-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.popular-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.popular-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+.foto-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.foto-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.foto-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.foto-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+.licenziya-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.licenziya-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.licenziya-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.licenziya-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+.otziv-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.otziv-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.otziv-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.otziv-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+
+.licenziya2-sl .slick-dots
+{
+    position: absolute;
+    bottom: -16px;
+
+    display: none;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+
+.licenziya2-sl .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.licenziya2-sl .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    background: #C6FEB3;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+.licenziya2-sl .slick-active button {
+    background: #42AF1D !important;
+    width: 12px !important;
+    height: 12px !important;
+}
