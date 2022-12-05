@@ -394,6 +394,8 @@ function counter(el, perMembers, onClick, start, max) {
 }
 
 tarifCalc(".tarif-2", 24000, true, 8000, 3, 1, 200);
+tarifCalc(".tarif-9", 24000, true, 8000, 3, 1, 200);
+tarifCalc(".tarif-8", 126000, true, 22000, 3, 1, 200);
 tarifCalc(".tarif-3", 126000, true, 22000, 3, 1, 200);
 tarifCalc(".tarif-4", 4800, false, 1770, 10, 5, 200, true, [1560, 1326, 1170]);
 tarifCalc(
@@ -409,7 +411,7 @@ tarifCalc(
 );
 
 tarifCalc(
-  ".tarifsection-block2",
+  ".tarif-7",
   15000,
   false,
   4250,
@@ -420,7 +422,7 @@ tarifCalc(
   [5000, 4500, 4250]
 );
 tarifCalc(
-  ".tarifsection-block",
+  ".tarif-6",
   4800,
   false,
   1770,
