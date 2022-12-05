@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // new Quiz(document.querySelector(".nodone-block"));
+  new Quiz(document.querySelector(".nodone-block"));
 
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
