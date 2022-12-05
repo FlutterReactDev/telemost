@@ -372,7 +372,7 @@
                       <div class="raschet-padding">
                         <div class="raschet-chekbox">
                           <label class="checkbox-main">
-                            <input type="checkbox" name="1">
+                            <input type="radio" name="1" value="Хорошее (640х360)">
                               <div class="chekbox-title chekbox-title-color">
                                 Хорошее (640х360)
                               </div> 
@@ -381,7 +381,7 @@
                         </div>
                         <div class="raschet-chekbox">
                           <label class="checkbox-main">
-                            <input type="checkbox" name="1">
+                            <input type="radio" name="1" value="HD (1280x720)">
                               <div class="chekbox-title chekbox-title-color">
                                 HD (1280x720)
                               </div> 
@@ -390,7 +390,7 @@
                         </div>
                         <div class="raschet-chekbox">
                           <label class="checkbox-main">
-                            <input type="checkbox" name="1">
+                            <input type="radio" name="1" value="FULL HD (1920x1080)">
                               <div class="chekbox-title chekbox-title-color">
                                 FULL HD (1920x1080)
                               </div> 
@@ -405,13 +405,13 @@
                         Количество <br>участников
                       </div>
                       <div class="raschet-skolko">
-                        <div class="raschet-skolko-znak">
+                        <div class="raschet-skolko-znak minus">
                           -
                         </div>
                         <div class="raschet-skolko-number">
                           15
                         </div>
-                        <div class="raschet-skolko-znak">
+                        <div class="raschet-skolko-znak plus">
                           +
                         </div>
                       </div>
@@ -423,177 +423,180 @@
                   </div>
                 </div>
               </div>
-              <div class="raschet-wrap3">
-                <div class="raschet-wrap3-block">
-                  <div class="raschet-wrap3-title">
-                    Требования к серверу видеоконференцсвязи 
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border.svg" alt="">
-                      Операционная система
+              <div class="raschet-border__inner">
+                <div class="raschet-wrap3">
+                  <div class="raschet-wrap3-block">
+                    <div class="raschet-wrap3-title">
+                      Требования к серверу видеоконференцсвязи 
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border.svg" alt="">
+                        Операционная система
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle operation-system-subtitle">
+                      Linux, Windows (с использованием виртуализированной среды)
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border2.svg" alt="">
+                        Процессор
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle cpu-subtitle">
+                      4 ядра 3.2GHz и выше. Intel Core i3/i5/i7, Intel Xeon, AMD Ryzen
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border3.svg" alt="">
+                        Жесткий диск
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle hdd-subtitle">
+                      не менее 20 GB свободного пространства 
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border4.svg" alt="">
+                        Оперативная память
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle ram-subtitle">
+                      8 GB и более
                     </div>
                   </div>
-                  <div class="raschet-wrap3-suptitle">
-                    Linux, Windows (с использованием виртуализированной среды)
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border2.svg" alt="">
-                      Процессор
+                  <div class="raschet-wrap3-block">
+                    <div class="raschet-wrap3-title">
+                      Требования к оборудованию пользователя
+                    </div>
+                    <div class="raschet-wrap3-title2">
+                      ПК / Ноутбук
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border.svg" alt="">
+                        Операционная система
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle">
+                      Windows XP/7/8/10/11, Mac OS, Linux
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border2.svg" alt="">
+                        Процессор
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle">
+                      Двухъядерный процессорс частотой 2,5 ГГц или выше
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border5.svg" alt="">
+                        Браузеры
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle">
+                      Chrome, Yandex, Opera, Mozilla Firefox, Edge, Safari
+                    </div>
+                    <div class="raschet-wrap3-border">
+                      <div class="raschet-wrap3-border-wrap">
+                        <img src="images/raschet-wrap3-border4.svg" alt="">
+                        Оперативная память
+                      </div>
+                    </div>
+                    <div class="raschet-wrap3-suptitle">
+                      1 GB и более
                     </div>
                   </div>
-                  <div class="raschet-wrap3-suptitle">
-                    4 ядра 3.2GHz и выше. Intel Core i3/i5/i7, Intel Xeon, AMD Ryzen
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border3.svg" alt="">
-                      Жесткий диск
+                  <div class="raschet-wrap3-block">
+                    <div class="raschet-wrap3-title">
+                      Требования к каналу связи
+                    </div>
+                    <div class="raschet-wrap3-inner">
+                      <div class="raschet-wrap3-inner-block">
+                        <div class="raschet-wrap3-border">
+                          <div class="raschet-wrap3-border-wrap">
+                            <img src="images/raschet-wrap3-border.svg" alt="">
+                            Для сервера
+                          </div>
+                        </div>
+                        <div class="raschet-wrap3-suptitle server-subtitle">
+                          <span>7.5</span> Мбит/с
+                        </div>
+                      </div>
+                      <div class="raschet-wrap3-inner-block">
+                        <div class="raschet-wrap3-border">
+                          <div class="raschet-wrap3-border-wrap">
+                            <img src="images/raschet-wrap3-border6.svg" alt="">
+                            Для пользователя
+                          </div>
+                        </div>
+                        <div class="raschet-wrap3-suptitle user-suptitle">
+                          512 Кбит/с
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="raschet-wrap3-suptitle">
-                    не менее 20 GB свободного пространства 
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border4.svg" alt="">
-                      Оперативная память
+                  <div class="raschet-wrap3-block">
+                    <div class="raschet-wrap3-title">
+                      Мобильные устройства
                     </div>
-                  </div>
-                  <div class="raschet-wrap3-suptitle">
-                    8 GB и более
+                    <div class="raschet-wrap3-inner">
+                      <div class="raschet-wrap3-inner-block2">
+                        <div class="raschet-wrap3-border">
+                          <div class="raschet-wrap3-border-wrap">
+                            <img src="images/raschet-wrap3-border.svg" alt="">
+                            Операционная система
+                          </div>
+                        </div>
+                        <div class="raschet-wrap3-suptitle">
+                          IOS и Android
+                        </div>
+                      </div>
+                      <div class="raschet-wrap3-inner-block2">
+                        <div class="raschet-wrap3-border">
+                          <div class="raschet-wrap3-border-wrap">
+                            <img src="images/raschet-wrap3-border7.svg" alt="">
+                            Тип мобильного устройства
+                          </div>
+                        </div>
+                        <div class="raschet-wrap3-suptitle">
+                          Смартфоны и планшеты
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="raschet-wrap3-block">
-                  <div class="raschet-wrap3-title">
-                    Требования к оборудованию пользователя
-                  </div>
-                  <div class="raschet-wrap3-title2">
-                    ПК / Ноутбук
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border.svg" alt="">
-                      Операционная система
+                <div class="raschet-wrap4">
+                  <div class="raschet-wrap4-block">
+                    <div class="raschet-wrap4-button">
+                      <button>
+                        <img src="images/raschet-wrap4-button.svg" alt="">
+                        Скопировать параметры
+                      </button>
                     </div>
                   </div>
-                  <div class="raschet-wrap3-suptitle">
-                    Windows XP/7/8/10/11, Mac OS, Linux
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border2.svg" alt="">
-                      Процессор
+                  <div class="raschet-wrap4-block2">
+                    <div class="raschet-wrap4-button2">
+                      <button>
+                        <img src="images/raschet-wrap4-button2.svg" alt="">
+                        Бесплатный ключ с указанными параметрами
+                      </button>
                     </div>
                   </div>
-                  <div class="raschet-wrap3-suptitle">
-                    Двухъядерный процессорс частотой 2,5 ГГц или выше
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border5.svg" alt="">
-                      Браузеры
-                    </div>
-                  </div>
-                  <div class="raschet-wrap3-suptitle">
-                    Chrome, Yandex, Opera, Mozilla Firefox, Edge, Safari
-                  </div>
-                  <div class="raschet-wrap3-border">
-                    <div class="raschet-wrap3-border-wrap">
-                      <img src="images/raschet-wrap3-border4.svg" alt="">
-                      Оперативная память
-                    </div>
-                  </div>
-                  <div class="raschet-wrap3-suptitle">
-                    1 GB и более
-                  </div>
-                </div>
-                <div class="raschet-wrap3-block">
-                  <div class="raschet-wrap3-title">
-                    Требования к каналу связи
-                  </div>
-                  <div class="raschet-wrap3-inner">
-                    <div class="raschet-wrap3-inner-block">
-                      <div class="raschet-wrap3-border">
-                        <div class="raschet-wrap3-border-wrap">
-                          <img src="images/raschet-wrap3-border.svg" alt="">
-                          Для сервера
-                        </div>
-                      </div>
-                      <div class="raschet-wrap3-suptitle">
-                        7.5 Мбит/с
-                      </div>
-                    </div>
-                    <div class="raschet-wrap3-inner-block">
-                      <div class="raschet-wrap3-border">
-                        <div class="raschet-wrap3-border-wrap">
-                          <img src="images/raschet-wrap3-border6.svg" alt="">
-                          Для пользователя
-                        </div>
-                      </div>
-                      <div class="raschet-wrap3-suptitle">
-                        512 Кбит/с
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="raschet-wrap3-block">
-                  <div class="raschet-wrap3-title">
-                    Мобильные устройства
-                  </div>
-                  <div class="raschet-wrap3-inner">
-                    <div class="raschet-wrap3-inner-block2">
-                      <div class="raschet-wrap3-border">
-                        <div class="raschet-wrap3-border-wrap">
-                          <img src="images/raschet-wrap3-border.svg" alt="">
-                          Операционная система
-                        </div>
-                      </div>
-                      <div class="raschet-wrap3-suptitle">
-                        IOS и Android
-                      </div>
-                    </div>
-                    <div class="raschet-wrap3-inner-block2">
-                      <div class="raschet-wrap3-border">
-                        <div class="raschet-wrap3-border-wrap">
-                          <img src="images/raschet-wrap3-border7.svg" alt="">
-                          Тип мобильного устройства
-                        </div>
-                      </div>
-                      <div class="raschet-wrap3-suptitle">
-                        Смартфоны и планшеты
-                      </div>
+                  <div class="raschet-wrap4-block3">
+                    <div class="raschet-wrap4-button">
+                      <button>
+                        <img src="images/raschet-wrap4-button.svg" alt="">
+                        Скопировать параметры
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="raschet-wrap4">
-                <div class="raschet-wrap4-block">
-                  <div class="raschet-wrap4-button">
-                    <button>
-                      <img src="images/raschet-wrap4-button.svg" alt="">
-                      Скопировать параметры
-                    </button>
-                  </div>
-                </div>
-                <div class="raschet-wrap4-block2">
-                  <div class="raschet-wrap4-button2">
-                    <button>
-                      <img src="images/raschet-wrap4-button2.svg" alt="">
-                      Бесплатный ключ с указанными параметрами
-                    </button>
-                  </div>
-                </div>
-                <div class="raschet-wrap4-block3">
-                  <div class="raschet-wrap4-button">
-                    <button>
-                      <img src="images/raschet-wrap4-button.svg" alt="">
-                      Скопировать параметры
-                    </button>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </section>
@@ -2851,60 +2854,8 @@ TLS. Медиа данные - протоколом SRTP.
      of last tab */
   $('ul.tabs3 li').last().addClass("tab_last");
     </script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-       $(".table-inner").css({ display: "none" });
-  $(".table-button").click(function () {
-    $(".table-arrow").toggleClass("hide");
-    $(".table-button").toggleClass("hide");
-    if ($(".table-button").hasClass("hide")) {
-      $(".table-button button").text("Развернуть таблицу");
-    } else {
-      $(".table-button button").text("Свернуть таблицу");
-    }
-    if ($(window).width() <= 480) {
-      $(".tablemb-inner .tablemb-inner-wrap").animate({
-        height: "toggle",
-      });
-    } else {
-      $(".table-inner").animate({
-        height: "toggle",
-      });
-    }
-  });
 
-  const tablembTitle = ["Корпоративный", "Доступный", "Облачный", "Вебинар"];
-  $(".tablemb-inner").slick({
-    prevArrow: document.querySelector(".tablemb-arrow--left"),
-    nextArrow: document.querySelector(".tablemb-arrow--right"),
-    swipe: false,
-  });
-
-  $(".tablemb-inner").on(
-    "beforeChange",
-    function (event, slick, currentSlide, nextSlide) {
-      $(".tablemb-title").fadeOut(200, () => {
-        $(".tablemb-title").text("").text(tablembTitle[nextSlide]).fadeIn(200);
-      });
-    }
-  );
-
-   if($(window).width() <= 768) {
-      $('.nodone').css({height:750})
-  }
-
-  $('.table-show').click(function() {
-    $('.table-show').toggleClass('show')
-    $('.table-shadow').toggleClass('hide')
-  })
-  $(".nodone-button").click(function () {
-    $('.nodone-top').remove()
-    $('.nodone').animate({height: $('.nodone').get(0).scrollHeight},150);
-    $('.nodone-border').css({pointerEvents:'auto'})
-    $('.nodone-shadow').remove()
-  });
-});
-    </script>
+   
     <script type="text/javascript">
       $(document).ready(function () {
        $(".trebovanie-sl").slick({

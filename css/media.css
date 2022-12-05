@@ -643,6 +643,9 @@
 
 /* стили для sm-устройств */
 @media screen and (max-width: 992px) {
+	.progressBarContainer {
+		bottom: 50px;
+	}
 	.header-menu {
 		display: none;
 	}
