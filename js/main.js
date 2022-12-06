@@ -83,7 +83,7 @@ $(document).ready(function () {
   function startProgressbar() {
     resetProgressbar();
     percentTime = 0;
-    tick = setInterval(interval, 5);
+    tick = setInterval(interval, 12);
 
     $(".inProgress" + progressBarIndex)
       .parent()
@@ -277,8 +277,10 @@ function tarifCalc(
   if (technicalSupport) {
     $(`${el} .dostup-border-tgl input`).on("change", function (e) {
       if ($(`${el} .dostup-border-tgl input`).is(":checked")) {
+        $(`${el} .dostup-border-price-absolute`).show(100)
         calc(price, 50000);
       } else {
+        $(`${el} .dostup-border-price-absolute`).hide(100)
         calc(price, -50000);
       }
     });

@@ -450,6 +450,9 @@ ul {
   cursor: pointer;
   transition: width 0.3s;
 }
+.progressBarItem span div {
+  border-radius: 30px;
+}
 .progressBarContainer .progressBarItem.active {
   width: 164px;
 }
@@ -1056,6 +1059,7 @@ ul {
 .dostup-border-price-absolute {
   position: absolute;
   top: 16px;
+  display: none;
   left: 247px;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 600;

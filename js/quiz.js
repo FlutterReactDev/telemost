@@ -282,9 +282,12 @@ class Quiz {
 
   init() {
     this.appendNodone(this.activeQuiz);
-    this.nextBtn.addEventListener("click", () => {
-      this.onChangeQuiz();
-    });
+    if(this.nextBtn ){
+      this.nextBtn.addEventListener("click", () => {
+        this.onChangeQuiz();
+      });
+    }
+    
   }
 
   onChangeQuiz() {
