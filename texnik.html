@@ -340,8 +340,8 @@
                       <button>Сбросить</button>
                     </div>
                   </div>
-                  <div class="raschet-inner">
-                    <div class="raschet-inner-border">
+                  <div class="raschet-inner ">
+                    <div class="raschet-inner-border quality">
                       <div class="raschet-inner-button">
                         <button>
                           <img src="images/raschet-inner-button.svg" alt="">
@@ -351,7 +351,7 @@
                           Хорошее качество
                       </div>
                     </div>
-                    <div class="raschet-inner-border">
+                    <div class="raschet-inner-border members">
                       <div class="raschet-inner-button">
                         <button>
                           <img src="images/raschet-inner-button.svg" alt="">
@@ -580,7 +580,7 @@
                   </div>
                   <div class="raschet-wrap4-block2">
                     <div class="raschet-wrap4-button2">
-                      <button>
+                      <button class="btn js-show-modal" data-modal="23">
                         <img src="images/raschet-wrap4-button2.svg" alt="">
                         Бесплатный ключ с указанными параметрами
                       </button>
@@ -607,7 +607,7 @@
               Параметры серверов расчитаны при условии использования WebRTC - клиента. <br>При использовании SIP/H.323 - подключений, параметры сервера предоставляются по запросу.
             </div>
             <div class="texnikkons-button">
-              <button>
+              <button class="btn js-show-modal" data-modal="7">
                 <img src="images/texnikkons-button.svg" alt="">
                 Запросить техническую консультацию
               </button>
@@ -1110,6 +1110,8 @@
                 </div>
                 </div>
               </div>
+
+          
             </div>
           </div>
         </section>
@@ -1757,7 +1759,7 @@
                   Помощь в решении проблем, связанных с корректной <br>работой программы. Отправьте на электронную почту <br><a href="#">support@mytelemost.ru</a> письмо с описанием <br>проблемы. Наш специалист обязательно Вам ответит.
                 </div>
                 <div class="raschet2-border-button">
-                  <button>
+                  <button class="btn js-show-modal" data-modal="8">
                     Написать в поддержку
                     <img src="images/raschet2-border-button.svg" alt="">
                   </button>
@@ -1819,7 +1821,7 @@
                     </li>
                   </ul>
                   <div class="variant-button">
-                    <button>Запросить расширенную поддержку</button>
+                    <button class="btn js-show-modal" data-modal="9">Запросить расширенную поддержку</button>
                   </div>
                 </div>
               </div>
@@ -1857,7 +1859,7 @@
                     
                   </ul>
                   <div class="variant-button">
-                    <button>Запросить эксклюзивную поддержку</button>
+                    <button class="btn js-show-modal" data-modal="10">Запросить эксклюзивную поддержку</button>
                   </div>
                 </div>
                 <div class="variant-border2">
@@ -1927,7 +1929,7 @@
               Если у Вас возникли вопросы, связанные с корректной работой программы. <br>Напишите нам, и мы постараемся оперативно решить Вашу проблему, или ответить на Ваш вопрос
             </div>
             <div class="poderjka-button">
-              <button>
+              <button class="btn js-show-modal" data-modal="27">
                 Написать в поддержку
                 <img src="images/poderjka-button.svg" alt="">
               </button>
@@ -2007,7 +2009,7 @@
                     Не требуется установка дополнительных плагинов. Только наличие браузера.
                   </div>
                   <div class="raschet4-button raschet4-button-dk">
-                    <button>
+                    <button class="btn js-show-modal" data-modal="24">
                       <img src="images/raschet4-button.svg" alt="">
                       Бесплатный ключ для браузера 
                     </button>
@@ -2036,7 +2038,7 @@
                   </div>
                 </div>
                 <div class="raschet4-button raschet4-button-mb">
-                    <button>
+                    <button class="btn js-show-modal" data-modal="25">
                       <img src="images/raschet4-button.svg" alt="">
                       Бесплатный ключ для браузера 
                     </button>
@@ -2503,7 +2505,7 @@ TLS. Медиа данные - протоколом SRTP.
               </a>
             </div>
             <div class="footer-end-button">
-              <button class="btn js-show-modal" data-modal="1">
+              <button class="btn js-show-modal" data-modal="26">
                 Получить ключ
                 <img src="images/footer-end-button.svg" alt="">
               </button>
@@ -2525,7 +2527,275 @@ TLS. Медиа данные - протоколом SRTP.
           <div class="modal-close-button">
             <button class="button-close-modal js-close-modal">
               Закрыть
-              <img src="images/modal-close-button.svg" alt="">
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Заявка на бесплатный доступ
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="23">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Заявка на бесплатный доступ
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="24">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Заявка на бесплатный доступ
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="25">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Заявка на бесплатный доступ
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="26">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
             </button>
           </div>
           <div class="modal-border-new-pd">
@@ -2586,7 +2856,7 @@ TLS. Медиа данные - протоколом SRTP.
           <div class="modal-close-button">
             <button class="button-close-modal js-close-modal">
               Закрыть
-              <img src="images/modal-close-button.svg" alt="">
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
             </button>
           </div>
           <div class="modal-wrap">
@@ -2772,6 +3042,362 @@ TLS. Медиа данные - протоколом SRTP.
     </div>    
 
 
+
+    <div class="modal js-modal" data-modal="7">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img2.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Запрос консультации
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="modal js-modal" data-modal="8">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img3.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Запрос поддержки
+          </div>
+          <div class="modad-block">
+            <div class="vopros-suptitle">
+                  Ваш вопрос/сообщение<span class="modad-span">*</span>
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Добрый день!">
+                </div>
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="27">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img3.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Запрос поддержки
+          </div>
+          <div class="modad-block">
+            <div class="vopros-suptitle">
+                  Ваш вопрос/сообщение<span class="modad-span">*</span>
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Добрый день!">
+                </div>
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal js-modal" data-modal="9">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img4.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Запрос расширенной поддержки
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="modal js-modal" data-modal="10">
+      <div class="modal__inner modal-border">
+    
+
+    
+        
+    
+
+        <div class="modal-border-new">
+          <div class="modal-close-button">
+            <button class="button-close-modal js-close-modal">
+              Закрыть
+              <img class="js-close-modal" src="images/modal-close-button.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-border-new-pd">
+          <div class="modal-border-new-img">
+            <img src="images/modal-border-new-img5.svg" alt="">
+          </div>
+          <div class="modal-border-new-title">
+            Запрос экслюзивной поддержки
+          </div>
+          </div>
+          <div class="vopros-wrap">
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваше имя
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="Например, Иван">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Номер Вашего телефона
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="+7">
+                </div>
+              </div>
+              <div class="vopros-block">
+                <div class="vopros-suptitle">
+                  Ваш Email
+                </div>
+                <div class="vopros-input">
+                  <input type="text" size="40" placeholder="example@mail.ru">
+                </div>
+              </div>
+            </div>
+            <div class="modal-border-new-pd">
+              <div class="modal-inner">
+                <div class="vopros-inner-title vopros-inner-title-dp">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+                <div class="vopros-inner-button vopros-inner-button-center">
+                  <button>Отправить</button>
+                </div>
+                <div class="vopros-inner-title vopros-inner-title-mb vopros-inner-title-center">
+                  Нажимая “Отправить”, я подтвержаю своё согласие на обработку персональных данных
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -2859,7 +3485,7 @@ TLS. Медиа данные - протоколом SRTP.
     <script type="text/javascript">
       $(document).ready(function () {
        $(".trebovanie-sl").slick({
-    infinite: true,
+        infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -2913,8 +3539,15 @@ TLS. Медиа данные - протоколом SRTP.
     ],
   });
        });
+
+
+
+
+
     </script>
+   
     <script src="js/quiz.js"></script>
+    <script src="js/calc.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
   </body>

@@ -258,143 +258,6 @@ items.forEach((item) => {
 
 /*tarif cacl*/
 
-function tarifCalc(
-  el,
-  startPrice,
-  technicalSupport,
-  perMembersPrice,
-  counterStart = 3,
-  counterPerMembers = 1,
-  counterMax,
-  subscription = false,
-  perPrice = []
-) {
-  const price = `${el} .dostup-border-price2 .tarif-price`;
-  let subValue = 0;
-  let count = 0;
-  $(price).text(numberWithSpaces(startPrice));
-
-  if (technicalSupport) {
-    $(`${el} .dostup-border-tgl input`).on("change", function (e) {
-      if ($(`${el} .dostup-border-tgl input`).is(":checked")) {
-        $(`${el} .dostup-border-price-absolute`).show(100)
-        calc(price, 50000);
-      } else {
-        $(`${el} .dostup-border-price-absolute`).hide(100)
-        calc(price, -50000);
-      }
-    });
-  }
-  if (subscription) {
-    const checkboxes = document.querySelectorAll(`${el} .checkbox-main input`);
-    $(checkboxes[checkboxes.length - 1]).prop("checked", true);
-    subValue = numberWithSpaces(
-      parseInt($(checkboxes[checkboxes.length - 1]).val())
-    );
-    perMembersPrice = perPrice[perPrice.length - 1];
-
-    $(price).text(subValue);
-
-    $(`${el} .checkbox-main input`).on("change", function (e) {
-      console.log(parseInt(deleteSpaces($(price).text())), parseInt(subValue));
-      $(price).text(
-        numberWithSpaces(
-          parseInt(deleteSpaces($(price).text())) -
-            parseInt(deleteSpaces(subValue)) +
-            parseInt(e.target.value)
-        )
-      );
-
-      $(price).text(
-        numberWithSpaces(
-          parseInt(deleteSpaces($(price).text())) -
-            count * perMembersPrice +
-            parseInt(count * perPrice[$(e.target).data("id")])
-        )
-      );
-
-      subValue = numberWithSpaces(parseInt(e.target.value));
-      perMembersPrice = perPrice[$(e.target).data("id")];
-    });
-  }
-
-  function onClick(type) {
-    if (type == "minus") {
-      calc(price, -perMembersPrice);
-      count--;
-    } else {
-      calc(price, perMembersPrice);
-      count++;
-    }
-  }
-
-  counter(
-    `${el} .dostup-border-inner-wrap`,
-    counterPerMembers,
-    onClick,
-    counterStart,
-    counterMax
-  );
-}
-
-function calc(el, num1) {
-  const sum = $(el).text();
-
-  $(el).text(numberWithSpaces(parseInt(deleteSpaces(sum)) + num1));
-}
-function numberWithSpaces(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
-function deleteSpaces(str) {
-  return str.replace(/\s/g, "");
-}
-function counter(el, perMembers, onClick, start, max) {
-  let value = start;
-  const content = `${el} .dostup-border-number2`;
-  const minus = `${el} .dostup-border-border.minus`;
-  const plus = `${el} .dostup-border-border.plus`;
-
-  $(content).text(start);
-
-  if (value <= start) {
-    $(minus).css({ display: "none" });
-  } else {
-    $(minus).css({ display: "block" });
-  }
-
-  $(minus).click(function () {
-    value -= perMembers;
-    if (value < max) {
-      $(plus).css({ display: "block" });
-    }
-    if (value <= start) {
-      $(content).text(start);
-      $(minus).css({ display: "none" });
-      onClick("minus");
-    } else {
-      $(content).text(value);
-      $(minus).css({ display: "block" });
-
-      onClick("minus");
-    }
-  });
-
-  $(plus).click(function () {
-    value += perMembers;
-    $(minus).css({ display: "block" });
-    if (value >= max) {
-      onClick("plus");
-      $(content).text(max);
-      $(plus).css({ display: "none" });
-    } else {
-      $(content).text(value);
-      $(plus).css({ display: "block" });
-
-      onClick("plus");
-    }
-  });
-}
-
 tarifCalc(".tarif-2", 24000, true, 8000, 3, 1, 200);
 tarifCalc(".tarif-9", 24000, true, 8000, 3, 1, 200);
 tarifCalc(".tarif-8", 126000, true, 22000, 3, 1, 200);
@@ -423,17 +286,7 @@ tarifCalc(
   true,
   [5000, 4500, 4250]
 );
-tarifCalc(
-  ".tarif-6",
-  4800,
-  false,
-  1770,
-  10,
-  5,
-  200,
-  true,
-  [1560, 1326, 1170]
-);
+tarifCalc(".tarif-6", 4800, false, 1770, 10, 5, 200, true, [1560, 1326, 1170]);
 techCalc();
 function techCalc() {
   const quality = {
@@ -488,19 +341,31 @@ function techCalc() {
       operatingSystem: `Linux, Windows (с использованием виртуализированной среды)`,
     },
   };
-
-  $(".server-subtitle span").text(0.5);
-
-  $(".raschet-chekbox input").eq(0).prop("checked", true);
   let counterStart = 1;
   let counterMax = 100;
   let counterValue = counterStart;
-  $('.raschet-top-button button').click(function() {
-    $(".raschet-border__inner").slideUp(100);
-    counterValue = counterStart
+  $(".server-subtitle span").text(0.5);
+  $(".raschet-chekbox input").eq(0).prop("checked", true);
+  $(".raschet-inner-border.quality .raschet-inner-text").text(
+    $(".raschet-chekbox input").eq(0).val()
+  );
+  $(".raschet-inner-border.members .raschet-inner-text").text(
+    `${counterStart} участников`
+  );
+
+  $(".raschet-top-button button").click(function () {
+    $(".raschet-border__inner").slideUp(400);
+    counterValue = counterStart;
     $(".raschet-skolko-number").text(counterValue);
     $(".raschet-chekbox input").eq(0).prop("checked", true);
-  })
+
+    $(".raschet-inner-border.quality .raschet-inner-text").text(
+      $(".raschet-chekbox input").eq(0).val()
+    );
+    $(".raschet-inner-border.members .raschet-inner-text").text(
+      `${counterStart} участников`
+    );
+  });
   $(".raschet-skolko-number").text(counterValue);
 
   $(".raschet-skolko-znak.minus").click(function () {
@@ -526,9 +391,23 @@ function techCalc() {
   });
 
   function calc(counterValue, quality, filters) {
-    $(".raschet-border__inner").slideDown(100);
+    $(".raschet-border__inner").slideDown(400);
+
     let value;
     let filter;
+    let checkboxValue;
+    const checkboxes = document.querySelectorAll(".raschet-chekbox input");
+    checkboxes.forEach((el) => {
+      if ($(el).is(":checked")) {
+        value = quality[$(el).val()];
+        checkboxValue = $(el).val();
+      }
+    });
+
+    $(".raschet-inner-border.quality .raschet-inner-text").text(checkboxValue);
+    $(".raschet-inner-border.members .raschet-inner-text").text(
+      `${counterValue} участников`
+    );
 
     if (counterValue <= 25) {
       filter = filters[25];
@@ -539,12 +418,6 @@ function techCalc() {
     } else {
       filter = filters[200];
     }
-    const checkboxes = document.querySelectorAll(".raschet-chekbox input");
-    checkboxes.forEach((el) => {
-      if ($(el).is(":checked")) {
-        value = quality[$(el).val()];
-      }
-    });
 
     $(".user-suptitle").text(value.value);
     $(".server-subtitle span").text(counterValue * value.size);

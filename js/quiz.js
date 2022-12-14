@@ -114,14 +114,65 @@ class Quiz {
         
       </div>
       <div class="nodone-border-block">
-        <div class="nodone-border-suptitle">
-          Количество участников
+      <div class="nodone-border-inner">
+      
+      
+      <div class="nodone-border-type">
+      <div class="nodone-border-suptitle">
+         Тип сервера
         </div>
-        <div class="nodone-border-skolko">
-          <div class="nodone-border-skolko-znak minus">-</div>
-          <div class="nodone-border-skolko-number">15</div>
-          <div class="nodone-border-skolko-znak plus">+</div>
-        </div>
+    <div class="nodone-border-inner">
+    <div class="nodone-border-chekbox2">
+      <label class="checkbox-main">
+        <input type="radio" name="type" value="Облачный">
+          <div class="chekbox-title">
+            Облачный
+          </div> 
+        <span class="checkbox"></span>
+      </label>
+    </div>
+    <div class="nodone-border-chekbox2">
+      <label class="checkbox-main">
+        <input type="radio" name="type" value="Свой сервер">
+          <div class="chekbox-title">
+            Свой сервер
+          </div> 
+        <span class="checkbox"></span>
+      </label>
+    </div>
+  </div>
+    </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <div>
+    <div class="nodone-border-suptitle">
+     Количество участников
+    </div>
+   <div class="nodone-border-skolko">
+      <div class="nodone-border-skolko-znak minus">-</div>
+     <div class="nodone-border-skolko-number">15</div>
+     <div class="nodone-border-skolko-znak plus">+</div>
+   </div>
+ </div>
+      
+      
+      
+      
+      
+      
+      </div>
+      
+       
+       
       </div>
       <div class="nodone-border-block">
         <div class="nodone-border-inner2">
@@ -164,8 +215,9 @@ class Quiz {
       </div>`,
         answers: {
           requiredQuality: "",
-          numberOfparticipants: "15",
+          numberOfparticipants: "3",
           extendedTechnicalSupport: false,
+          type: "",
         },
       },
       {
@@ -176,25 +228,8 @@ class Quiz {
         <div class="nodone-border-suptitle3">
           Вам подходят тарифные планы:
         </div>
-        <div class="nodone-border-inner">
-          <div class="nodone-border-border">
-            <div class="nodone-border-border-title">
-              Доступный
-              <img src="images/nodone-border-border-title.svg" alt="">
-            </div>
-            <div class="nodone-border-border-suptitle">
-              Серверное решение
-            </div>
-          </div>
-          <div class="nodone-border-border">
-            <div class="nodone-border-border-title">
-              Корпоративный
-              <img src="images/nodone-border-border-title2.svg" alt="">
-            </div>
-            <div class="nodone-border-border-suptitle">
-              Серверное решение
-            </div>
-          </div>
+        <div class="nodone-border-inner tarrifs">
+         
         </div>
 
       </div>
@@ -262,7 +297,6 @@ class Quiz {
       Шаг 3
     </div>`,
         answers: {
-          tariff: "",
           name: "",
           phone: "",
           email: "",
@@ -282,12 +316,11 @@ class Quiz {
 
   init() {
     this.appendNodone(this.activeQuiz);
-    if(this.nextBtn ){
+    if (this.nextBtn) {
       this.nextBtn.addEventListener("click", () => {
         this.onChangeQuiz();
       });
     }
-    
   }
 
   onChangeQuiz() {
@@ -317,15 +350,21 @@ class Quiz {
       const checkboxes = document.querySelectorAll(
         ".nodone-border-chekbox2 label input"
       );
+      const checkboxes2 = document.querySelectorAll(
+        ".nodone-border-type label input"
+      );
 
-      const number = $(".nodone-border-skolko-number").text();
       const option = document.querySelector(".nodone-border-tgl input");
       checkboxes.forEach((el) => {
         if ($(el).is(":checked")) {
           this.quiz[1].answers.requiredQuality = $(el).val();
         }
       });
-      this.quiz[1].answers.numberOfparticipants = number;
+      checkboxes2.forEach((el) => {
+        if ($(el).is(":checked")) {
+          this.quiz[1].answers.type = $(el).val();
+        }
+      });
       if ($(option).is(":checked")) {
         this.quiz[1].answers.extendedTechnicalSupport = true;
       } else {
@@ -333,7 +372,8 @@ class Quiz {
       }
       if (
         this.quiz[1].answers.requiredQuality &&
-        this.quiz[1].answers.numberOfparticipants
+        this.quiz[1].answers.numberOfparticipants &&
+        this.quiz[1].answers.type
       ) {
         isValid = true;
       }
@@ -354,7 +394,7 @@ class Quiz {
         }
         return isValid;
       };
-      if (this.quiz[2].answers.tariff && validateInputs()) {
+      if (validateInputs()) {
         isValid = true;
       }
     }
@@ -398,29 +438,88 @@ class Quiz {
       const minus = document.querySelector(".nodone-border-skolko-znak.minus");
       const plus = document.querySelector(".nodone-border-skolko-znak.plus");
       const number = document.querySelector(".nodone-border-skolko-number");
+      const checkboxes = document.querySelectorAll(
+        ".nodone-border-type .checkbox-main input"
+      );
+      const counterStart = 3;
+
+      $(checkboxes).on("change", (e) => {
+        $(".nodone-border-type .checkbox-main").removeClass(
+          "nodone-border-chekbox-active"
+        );
+        $(e.target).parent().addClass("nodone-border-chekbox-active");
+      });
+
+      const counterMax = 200;
+      let value = counterStart;
+      $(number).text(value);
 
       minus.addEventListener("click", () => {
-        if (+number.textContent > 0) {
-          number.textContent = +number.textContent - 1;
+        value--;
+        if (value >= counterStart) {
+          $(number).text(value);
         }
+        this.quiz[1].answers.numberOfparticipants = value;
       });
 
       plus.addEventListener("click", () => {
-        number.textContent = +number.textContent + 1;
+        value++;
+        if (value <= counterMax) {
+          $(number).text(value);
+        }
+        this.quiz[1].answers.numberOfparticipants = value;
       });
     }
 
     if (id == 3) {
-      const tariffs = document.querySelectorAll(".nodone-border-border");
+      const tarrifs = document.querySelector(".nodone-border-inner.tarrifs");
+      if (this.quiz[1].answers.type == "Облачный") {
+        $(tarrifs).text("");
+        $(tarrifs).append(`
+        <div class="nodone-border-border">
+        <div class="nodone-border-border-title">
+        Облачный
+          <img src="images/nodone-cloud.svg" alt="">
+        </div>
+        <div class="nodone-border-border-suptitle">
+         Облачное решение
+        </div>
+      </div>
+      <div class="nodone-border-border">
+        <div class="nodone-border-border-title">
+          Вебинар
+          <img src="images/nodone-webinar.svg" alt="">
+        </div>
+        <div class="nodone-border-border-suptitle">
+        Облачное решение
+        </div>
+      </div>
+        `);
+      } else {
+        $(tarrifs).text("");
+        $(tarrifs).append(`
+       
 
-      tariffs.forEach((el) => {
-        el.addEventListener("click", () => {
-          const tariffName = $(el.querySelector(".nodone-border-border-title"))
-            .text()
-            .trim();
-          this.quiz[2].answers.tariff = tariffName;
-        });
-      });
+      <div class="nodone-border-border">
+      <div class="nodone-border-border-title">
+        Доступный
+        <img src="images/nodone-border-border-title.svg" alt="">
+      </div>
+      <div class="nodone-border-border-suptitle">
+        Серверное решение
+      </div>
+    </div>
+    <div class="nodone-border-border">
+      <div class="nodone-border-border-title">
+        Корпоративный
+        <img src="images/nodone-border-border-title2.svg" alt="">
+      </div>
+      <div class="nodone-border-border-suptitle">
+        Серверное решение
+      </div>
+    </div>
+        `);
+      }
     }
 
     $(".input-phone").inputmask("+7(999) 999-99-99");
@@ -444,15 +543,17 @@ class Quiz {
       if (phoneInput && nameInput && emailInput) {
         this.quiz[2].answers.name = nameInput;
         this.quiz[2].answers.phone = phoneInput;
-        this.quiz[2].answers.emailInput = emailInput;
+        this.quiz[2].answers.email = emailInput;
         isValid = true;
       }
       return isValid;
     };
-    if (this.quiz[2].answers.tariff && validateInputs()) {
+    if (validateInputs()) {
+      $(".nodone-border.quiz").hide();
+      $(".nodone-border-bottom").hide()
+      $(".nodone-border.quiz-success").fadeIn(300);
+
       console.log(this.getData());
     }
-    
-    
   };
 }
