@@ -1206,6 +1206,9 @@ ul {
 .table-shadow.hide {
   display: none;
 }
+.harakter-shadow.table-shadow2.hide {
+  display: none;
+}
 .table-inner {
   display: none;
 }
