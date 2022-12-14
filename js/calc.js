@@ -50,16 +50,45 @@ function tarifCalc(
     });
   }
 
-  function onClick(type) {
+  function onClick(type, countOfMembers) {
     if (type == "minus") {
       calc(price, -perMembersPrice);
       membersCount = membersCount - counterPerMembers;
-      count--;
+      count = (countOfMembers - counterStart) / counterPerMembers;
     } else {
       calc(price, perMembersPrice);
       membersCount = membersCount + counterPerMembers;
-      count++;
+      count = (countOfMembers - counterStart) / counterPerMembers;
     }
+  }
+  function calcOnChange(valueInput) {
+    membersCount = valueInput
+    if (!subscription) {
+      value = 0;
+      value = valueInput * perMembersPrice;
+      if (isTechnicalSupport) {
+        value += 50000;
+      }
+
+     
+    } else {
+     
+      const checkboxes = document.querySelectorAll(
+        `${el} .checkbox-main input`
+      );
+      checkboxes.forEach((el) => {
+        if ($(el).is(":checked")) {
+          value = parseInt($(el).val());
+        }
+      });
+
+      count = (valueInput - counterStart) / counterPerMembers;
+
+      value = value + perMembersPrice * count;
+      $(price).text(numberWithSpaces(value));
+    }
+
+    $(price).text(numberWithSpaces(value));
   }
   function calc(el, num1) {
     value += num1;
@@ -71,7 +100,8 @@ function tarifCalc(
     counterPerMembers,
     onClick,
     counterStart,
-    counterMax
+    counterMax,
+    calcOnChange
   );
 
   $(`${el} .dostup-border-button3 button`).click(function () {
@@ -102,13 +132,46 @@ function numberWithSpaces(x) {
 function deleteSpaces(str) {
   return str.replace(/\s/g, "");
 }
-function counter(el, perMembers, onClick, start, max) {
+function counter(el, perMembers, onClick, start, max, calcOnChange) {
   let value = start;
   const content = `${el} .dostup-border-number2`;
   const minus = `${el} .dostup-border-border.minus`;
   const plus = `${el} .dostup-border-border.plus`;
 
   $(content).text(start);
+
+  $(content).on("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      value =
+        parseInt($(e.target).text()) -
+        (parseInt($(e.target).text()) % perMembers);
+
+      if (value <= start) {
+        $(minus).css({ display: "none" });
+      } else {
+        $(minus).css({ display: "block" });
+      }
+
+      if (value >= max) {
+        $(plus).css({ display: "none" });
+      } else {
+        $(plus).css({ display: "block" });
+      }
+      if (!value) {
+        value = start;
+        $(e.target).text(value);
+      }
+      if (value >= max) {
+        value = max;
+
+        $(e.target).text(value);
+      }
+
+      $(e.target).text(value);
+      calcOnChange(value);
+    }
+  });
 
   if (value <= start) {
     $(minus).css({ display: "none" });
@@ -124,12 +187,12 @@ function counter(el, perMembers, onClick, start, max) {
     if (value <= start) {
       $(content).text(start);
       $(minus).css({ display: "none" });
-      onClick("minus");
+      onClick("minus", value);
     } else {
       $(content).text(value);
       $(minus).css({ display: "block" });
 
-      onClick("minus");
+      onClick("minus", value);
     }
   });
 
@@ -137,14 +200,14 @@ function counter(el, perMembers, onClick, start, max) {
     value += perMembers;
     $(minus).css({ display: "block" });
     if (value >= max) {
-      onClick("plus");
+      onClick("plus", value);
       $(content).text(max);
       $(plus).css({ display: "none" });
     } else {
       $(content).text(value);
       $(plus).css({ display: "block" });
 
-      onClick("plus");
+      onClick("plus", value);
     }
   });
 }
