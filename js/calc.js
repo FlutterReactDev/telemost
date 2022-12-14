@@ -53,11 +53,11 @@ function tarifCalc(
   function onClick(type) {
     if (type == "minus") {
       calc(price, -perMembersPrice);
-      membersCount--;
+      membersCount = membersCount - counterPerMembers;
       count--;
     } else {
       calc(price, perMembersPrice);
-      membersCount++;
+      membersCount = membersCount + counterPerMembers;
       count++;
     }
   }

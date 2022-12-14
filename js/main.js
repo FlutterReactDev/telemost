@@ -232,7 +232,13 @@ $(document).ready(function () {
 
   $(".nodone-button").click(function () {
     $(".nodone-top").fadeOut();
-    $(".nodone").animate({ height: $(".nodone").get(0).scrollHeight }, 150);
+    $(".nodone").animate(
+      { height: $(".nodone").get(0).scrollHeight },
+      150,
+      function () {
+        $(".nodone").css({ height: "auto" });
+      }
+    );
     $(".nodone-border").css({ pointerEvents: "auto" });
     $(".nodone-shadow").fadeOut();
   });
