@@ -522,7 +522,7 @@ class Quiz {
       }
     }
 
-    $(".input-phone").inputmask("+7(999) 999-99-99");
+    $(".quiz .input-phone").inputmask("+7(999) 999-99-99");
   }
 
   getData() {
@@ -534,9 +534,9 @@ class Quiz {
   }
 
   onComplete = () => {
-    const phoneInput = $(".input-phone").val();
-    const nameInput = $(".input-name").val();
-    const emailInput = $(".input-email").val();
+    const phoneInput = $(".quiz .input-phone").val();
+    const nameInput = $(".quiz .input-name").val();
+    const emailInput = $(".quiz .input-email").val();
 
     const validateInputs = () => {
       let isValid = false;

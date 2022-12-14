@@ -1,6 +1,7 @@
 $(document).ready(function () {
   new Quiz(document.querySelector(".nodone-block"));
 
+  $(".phone-input").inputmask("+7(999) 999-99-99");
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeModal();
@@ -226,6 +227,22 @@ $(document).ready(function () {
     }
   );
 
+  $(".harakter-content-inner").css({ display: "none" });
+  $(".harakter-show").click(function () {
+    $(".harakter-show").toggleClass("show");
+    $(".harakter-shadow").toggleClass("hide");
+    $(".harakter-arrow").toggleClass("hide");
+    $(".harakter-button").toggleClass("hide");
+    if ($(".harakter-button").hasClass("hide")) {
+      $(".harakter-button button").text("Развернуть таблицу");
+    } else {
+      $(".harakter-button button").text("Свернуть таблицу");
+    }
+    $(".harakter-content-inner").animate({
+      height: "toggle",
+    });
+  });
+
   if ($(window).width() <= 768) {
     $(".nodone").css({ height: 750 });
   }
@@ -348,7 +365,7 @@ function techCalc() {
     },
   };
   let counterStart = 1;
-  let counterMax = 100;
+  let counterMax = 200;
   let counterValue = counterStart;
   $(".server-subtitle span").text(0.5);
   $(".raschet-chekbox input").eq(0).prop("checked", true);
