@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new Quiz(document.querySelector(".nodone-block"));
 
-  $(".phone-input").inputmask("+7(999) 999-99-99");
+  $(".phone-input i").inputmask("+7(999) 999-99-99");
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeModal();
