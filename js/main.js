@@ -329,35 +329,27 @@ function techCalc() {
 
   const filter = {
     25: {
-      CPU: `4 ядра 3.2GHz и выше.
-      Intel Core i3/i5/i7,
-      Intel Xeon, AMD Ryzen
-      Оперативная память`,
+      CPU: `4 ядра 3.2GHz и выше. Intel Core i3/i5/i7, Intel Xeon, AMD Ryzen`,
       RAM: `8 GB и более`,
-      HDD: `не менее 20 GB
-      свободного пространства`,
+      HDD: `свободного пространства не менее 20 GB`,
       operatingSystem: `Linux, Windows (с использованием виртуализированной среды)`,
     },
     50: {
-      CPU: `6 ядер 3.2GHz и выше.
-      Intel Core i5/i7, Intel Xeon, AMD Ryzen
-      `,
+      CPU: `6 ядер 3.2GHz и выше. Intel Core i5/i7, Intel Xeon, AMD Ryzen`,
       RAM: `16 GB и более`,
       HDD: `не менее 20 GB
       свободного пространства`,
       operatingSystem: `Linux, Windows (с использованием виртуализированной среды)`,
     },
     100: {
-      CPU: `8 ядер 3.2GHz и выше.
-      Intel Core i7/i9, Intel Xeon, AMD Ryzen
-      `,
+      CPU: `8 ядер 3.2GHz и выше. Intel Core i7/i9, Intel Xeon, AMD Ryzen`,
       RAM: `32 GB и более`,
       HDD: `не менее 20 GB
       свободного пространства`,
       operatingSystem: `Linux, Windows (с использованием виртуализированной среды)`,
     },
     200: {
-      CPU: `16 ядер 3.2GHz и выше. Intel Core i7/i9, Intel Xeon, AMD Ryzen`,
+      CPU: `от 16 ядер 3.2GHz и выше. Intel Core i7/i9, Intel Xeon, AMD Ryzen`,
       RAM: `32 GB и более`,
       HDD: `не менее 20 GB
       свободного пространства`,
