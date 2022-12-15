@@ -62,17 +62,14 @@ function tarifCalc(
     }
   }
   function calcOnChange(valueInput) {
-    membersCount = valueInput
+    membersCount = valueInput;
     if (!subscription) {
       value = 0;
       value = valueInput * perMembersPrice;
       if (isTechnicalSupport) {
         value += 50000;
       }
-
-     
     } else {
-     
       const checkboxes = document.querySelectorAll(
         `${el} .checkbox-main input`
       );
@@ -166,6 +163,10 @@ function counter(el, perMembers, onClick, start, max, calcOnChange) {
         value = max;
 
         $(e.target).text(value);
+      }
+
+      if (value < start) {
+        value = start;
       }
 
       $(e.target).text(value);
