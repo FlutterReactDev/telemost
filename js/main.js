@@ -311,6 +311,7 @@ tarifCalc(
 );
 tarifCalc(".tarif-6", 4800, false, 1770, 10, 5, 200, true, [1560, 1326, 1170]);
 techCalc();
+
 function techCalc() {
   const quality = {
     "Хорошее (640х360)": {
@@ -391,6 +392,25 @@ function techCalc() {
 
     $(".raschet-skolko-number").text(counterValue);
   });
+
+  $(".raschet-skolko-number").on("input", function (e) {
+  
+      e.preventDefault();
+      counterValue = $(e.target).text();
+      
+ 
+      if (counterValue > counterMax) counterValue = counterMax;
+      $(e.target).text(counterValue);
+    
+  });
+
+  $(".raschet-skolko-number").focusout(function(e) {
+    counterValue = $(e.target).text();
+    if (counterValue < counterStart) counterValue = counterStart;
+    if (!counterValue) counterValue = counterStart;
+    if (counterValue > counterMax) counterValue = counterMax;
+    $(e.target).text(counterValue);
+  })
 
   $(".raschet-skolko-znak.plus").click(function () {
     counterValue++;
