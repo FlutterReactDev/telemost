@@ -394,23 +394,22 @@ function techCalc() {
   });
 
   $(".raschet-skolko-number").on("input", function (e) {
-  
-      e.preventDefault();
-      counterValue = $(e.target).text();
-      
- 
-      if (counterValue > counterMax) counterValue = counterMax;
+    e.preventDefault();
+    counterValue = $(e.target).text();
+    if (counterValue > counterMax) {
+      counterValue = counterMax;
       $(e.target).text(counterValue);
-    
+    }
+ 
   });
 
-  $(".raschet-skolko-number").focusout(function(e) {
+  $(".raschet-skolko-number").focusout(function (e) {
     counterValue = $(e.target).text();
     if (counterValue < counterStart) counterValue = counterStart;
     if (!counterValue) counterValue = counterStart;
     if (counterValue > counterMax) counterValue = counterMax;
     $(e.target).text(counterValue);
-  })
+  });
 
   $(".raschet-skolko-znak.plus").click(function () {
     counterValue++;
