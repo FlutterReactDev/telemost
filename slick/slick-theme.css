@@ -106,6 +106,37 @@
     top: 50%;
 }
 
+.partnermargin-sl .slick-prev
+{
+    left: -10px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    display: none !important;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    top: 38%;
+    z-index: 1;
+    transform: rotate(180deg);
+    
+}
+
+
+
+.partnermargin-sl .slick-next
+{
+    right: 17px;
+    background: #fff url(../images/slayder-arrow.svg) 50% 50% no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border: 1px solid #1E3301;
+    border-radius: 5px;
+    display: none !important;
+    top: 50%;
+}
+
 .trebovanie-sl .slick-prev
 {
     left: -10px;

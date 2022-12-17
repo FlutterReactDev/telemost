@@ -766,20 +766,23 @@ ul {
 
 .dostup-border-border {
   cursor: pointer;
+}
+
+.dostup-border-knopka {
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Roboto-Medium";
+  font-family: 'Roboto-Medium';
   color: #fff;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ffffff;
-  border-radius: 8px;
 }
 
-.dostup-border-border:hover {
+.dostup-border-knopka:hover {
   background: #008df4;
   border: 1px solid #008df4;
 }
@@ -4884,4 +4887,455 @@ ul.tabs3 li.active {
 
 .js-modal.is-open {
   overflow: auto;
+}
+
+
+
+/*partner*/
+
+.work-padding {
+  padding: 32px 0 128px 0;
+}
+
+.work3-button2 {
+  display: flex;
+  justify-content: center;
+}
+
+.work3-button2 button {
+  font-family: "Roboto Flex", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  background: rgba(32, 243, 227, 0.2);
+  border: 1px solid #20F3E3;
+  border-radius: 12px;
+}
+
+.work3-button2 button img {
+  margin: 0 0 0 8px;
+}
+
+.partnermargin {
+  margin: -72px 0 0 0;
+}
+
+.partnermargin-container {
+  padding: 0 9px;
+}
+
+.partnermargin-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.partnermargin-block {
+  width: 33.33333333%;
+  padding: 0 15px 32px 15px;
+}
+
+.partnermargin-border {
+  background: #FEE4CB;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.partnermargin-border2 {
+  background: #E9E7FD;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.partnermargin-border3 {
+  background: #DBF6FD;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.partnermargin-border4 {
+  background: #FFD3E2;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.partnermargin-border5 {
+  background: #C8F7DC;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.partnermargin-title {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #14225B;
+}
+
+.partnermargin-restagle {
+  background: #14225B;
+  border-radius: 27px;
+  height: 4px;
+  width: 80px;
+  margin: 16px auto 0 auto;
+}
+
+.partnerbr {
+  padding: 40px 0 68px 0;
+}
+
+.partnerbr-border {
+  background: linear-gradient(180deg, #223355 0%, #1C3974 100%);
+  border-radius: 30px;
+  padding: 64px 64px;
+}
+
+.partnerbr-title {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.partnerbr-suptitle {
+  padding: 40px 0 0 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.partnerbr-button {
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.partnerbr-button button {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  background: #0F5FFF;
+  border-radius: 12px;
+}
+
+.partnerbr-button button img {
+  margin: 0 8px 0 0;
+}
+
+.partnerbr-restagle {
+  background: #0F5FFF;
+  border-radius: 27px;
+  height: 4px;
+  width: 80px;
+  margin: 32px auto 0 auto;
+}
+
+.partnerpred {
+  background: linear-gradient(360deg, #F4F8FC 0%, rgba(244, 248, 252, 0) 88.08%);
+  border-radius: 0px 0px 200px 200px;
+  padding: 160px 0 112px 0;
+}
+
+.partnerpred-title {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 88px;
+  text-align: center;
+  color: #14225B;
+}
+
+.partnerpred-suptitle {
+  padding: 40px 0 80px 0;
+  border-bottom: 1px solid #68729C;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #14225B;
+}
+
+.partnerpred-container {
+  padding: 0 7px;
+}
+
+.partnerpred-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.partnerpred-block {
+  width: 33.333333333%;
+  padding: 80px 17px 0 17px;
+}
+
+.partnerpred-icon {
+  text-align: center;
+}
+
+.partnerpred-info {
+  padding: 16px 0 0 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #14225B;
+}
+
+
+
+
+/*ACCARDION2*/
+
+.accordion2 {
+  padding: 76px 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.accordion2 .item2 {
+  margin: 36px 0 0 0;
+  padding: 40px 40px;
+  cursor: pointer;
+  background: #F7FAFC;
+  border-radius: 16px;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+  
+}
+.accordion2 .item2.open {
+}
+.accordion2 .item2.open .hidden-box {
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  color: #151922;
+}
+
+.accordion2 .item2.open .text {
+  color: #151922;
+}
+
+.accordion2 .text img {
+  margin: 0 16px 0 0;
+}
+
+.accordion2 .text span {
+  margin: 0 0 0 5px;
+  color: rgba(15, 95, 255, 1);
+}
+
+.accordion2 .text {
+  position: relative;
+  padding: 0 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.accordion2 .text br {
+  display: none;
+}
+
+.accordion2 .item2.open .text {
+  transition: color 0.3s;
+}
+.accordion2 .icon {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+
+  transition: transform 0.2s ease-in;
+}
+.accordion2 .item2.open .icon {
+  transform: rotate(180deg);
+}
+
+
+.accordion2 .hidden-box {
+  grid-column: 1;
+  display: none;
+  transition: display 0.2 ease-in;
+}
+
+.accordion2 .hidden-box {
+  padding: 24px 0 0 0;
+}
+
+
+.partnerstal-acctitle {
+  padding: 16px 0 0 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #14225B;
+}
+
+.partnerstalacc-title {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #68729C;
+}
+
+.partnerstalacc-restagle {
+  background: #EAECF4;
+  border-radius: 27px;
+  height: 4px;
+  width: 384px;
+  margin: 24px 0 0 0;
+}
+
+.partnerstalacc-name {
+  padding: 24px 0 0 0;
+  font-family: 'Roboto-Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #14225B;
+}
+
+.partnerstalacc-position {
+  padding: 8px 0 0 0;
+  font-family: 'Roboto-Medium';
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #68729C;
+}
+
+.partnerstalacc-link {
+  padding: 24px 0 0 0;
+}
+
+.partnerstalacc-link a {
+  font-family: 'Roboto-Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #14225B;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.partnerstalacc-link a:hover {
+  text-decoration: underline;
+}
+
+.partnerstalacc-link a img {
+  margin: 0 16px 0 0;
+}
+
+.partnerstalacc-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.partnerstalacc-link-pd {
+  padding: 24px 0 0 16px;
+}
+
+.partnerstalacc-span {
+  margin: 0 0 0 15px;
+}
+
+
+
+.partnermargin-sl .slick-dots {
+  bottom: -40px;
+}
+.partnermargin-sl .slick-dots li {
+  --progress-width: 100%;
+  width: 16px;
+  height: 4px;
+  margin: 0;
+  margin-right: 8px;
+  transition: all 0.3s;
+  overflow: hidden;
+  opacity: 0.3;
+}
+.partnermargin-sl .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  background: #68729c;
+  transition: all 0.3s;
+  border-radius: 30px;
+  padding: 0;
+  position: relative;
+}
+.partnermargin-sl .slick-dots li.slick-active {
+  width: 64px;
+  opacity: 1 !important;
+}
+.partnermargin-sl .slick-dots li.slick-active button::before {
+  content: "";
+  background: #0f5fff;
+  opacity: 1 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  height: 100%;
+  width: 0;
+
+  animation: progressFill 2200ms linear;
+}
+
+@keyframes progressFill {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.partnermargin-slayder {
+  display: none;
+}
+
+.partnerstal {
+  padding: 144px 0 0 0;
+}
+
+.partnerstal-title {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #14225B;
 }

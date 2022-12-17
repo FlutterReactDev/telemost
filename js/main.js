@@ -188,6 +188,61 @@ $(document).ready(function () {
     ],
   });
 
+   $(".partnermargin-sl").slick({
+        infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnDotsHover: true,
+    pauseOnFocus: false,
+    pauseOnHover:false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 591,
+        settings: {
+          slidesToShow: 1,
+
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 416,
+        settings: {
+          slidesToShow: 1,
+
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
   /*table*/
   $(".table-inner").css({ display: "none" });
   $(".table-button").click(function () {
@@ -276,6 +331,14 @@ const items = document.querySelectorAll(".item");
 items.forEach((item) => {
   item.addEventListener("click", () => {
     item.classList.toggle("open");
+  });
+});
+
+const items2 = document.querySelectorAll(".item2");
+
+items2.forEach((item2) => {
+  item2.addEventListener("click", () => {
+    item2.classList.toggle("open");
   });
 });
 
@@ -461,3 +524,22 @@ function techCalc() {
     $(".ram-subtitle").text(filter.RAM);
   }
 }
+
+
+var $log = $('#log');
+
+function log(str) {
+  $log.html($log.html() + str + '<br>');
+}
+
+$('.js-phone').inputmask({
+  mask: ['+7 (999) 999-99-99', '8 999 999-99-99'],
+  jitMasking: 3,
+  showMaskOnHover: false,
+  autoUnmask: true
+});
+
+$('.js-form').on('submit', function () {
+  log('submit: ' + $(this).serialize());
+  return false;
+});

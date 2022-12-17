@@ -136,7 +136,53 @@ function counter(el, perMembers, onClick, start, max, calcOnChange) {
   const plus = `${el} .dostup-border-border.plus`;
 
   $(content).text(start);
+  $(content).on("input", function (e) {
+    e.preventDefault();
+    value = $(e.target).text();
+    if (value > start) {
+      value = max;
+      $(e.target).text(max);
+      value =
+        parseInt($(e.target).text()) -
+        (parseInt($(e.target).text()) % perMembers);
 
+      if (value <= start) {
+        $(minus).css({ display: "none" });
+      } else {
+        $(minus).css({ display: "block" });
+      }
+
+      if (value >= max) {
+        $(plus).css({ display: "none" });
+      } else {
+        $(plus).css({ display: "block" });
+      }
+      if (!value) {
+        value = start;
+        $(e.target).text(value);
+      }
+      if (value >= max) {
+        value = max;
+
+        $(e.target).text(value);
+      }
+
+      if (value < start) {
+        value = start;
+      }
+
+      $(e.target).text(value);
+      calcOnChange(value);
+    } else {
+      $(plus).css({ display: "block" });
+    }
+
+    if (value < start) {
+      $(minus).css({ display: "none" });
+    } else {
+      $(minus).css({ display: "block" });
+    }
+  });
   $(content).on("keydown", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -174,6 +220,39 @@ function counter(el, perMembers, onClick, start, max, calcOnChange) {
     }
   });
 
+  $(content).focusout(function (e) {
+    value =
+      parseInt($(e.target).text()) -
+      (parseInt($(e.target).text()) % perMembers);
+
+    if (value <= start) {
+      $(minus).css({ display: "none" });
+    } else {
+      $(minus).css({ display: "block" });
+    }
+
+    if (value >= max) {
+      $(plus).css({ display: "none" });
+    } else {
+      $(plus).css({ display: "block" });
+    }
+    if (!value) {
+      value = start;
+      $(e.target).text(value);
+    }
+    if (value >= max) {
+      value = max;
+
+      $(e.target).text(value);
+    }
+
+    if (value < start) {
+      value = start;
+    }
+
+    $(e.target).text(value);
+    calcOnChange(value);
+  });
   if (value <= start) {
     $(minus).css({ display: "none" });
   } else {
