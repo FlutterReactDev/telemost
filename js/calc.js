@@ -139,50 +139,23 @@ function counter(el, perMembers, onClick, start, max, calcOnChange) {
   $(content).on("input", function (e) {
     e.preventDefault();
     value = $(e.target).text();
-    if (value > start) {
+
+    if (value > max) {
       value = max;
-      $(e.target).text(max);
-      value =
-        parseInt($(e.target).text()) -
-        (parseInt($(e.target).text()) % perMembers);
-
-      if (value <= start) {
-        $(minus).css({ display: "none" });
-      } else {
-        $(minus).css({ display: "block" });
-      }
-
-      if (value >= max) {
-        $(plus).css({ display: "none" });
-      } else {
-        $(plus).css({ display: "block" });
-      }
-      if (!value) {
-        value = start;
-        $(e.target).text(value);
-      }
-      if (value >= max) {
-        value = max;
-
-        $(e.target).text(value);
-      }
-
-      if (value < start) {
-        value = start;
-      }
-
-      $(e.target).text(value);
-      calcOnChange(value);
+      $(plus).css({ display: "none" });
+      $(e.target).text(value)
     } else {
       $(plus).css({ display: "block" });
     }
-
-    if (value < start) {
+    if(value < start) {
       $(minus).css({ display: "none" });
-    } else {
+    }else {
       $(minus).css({ display: "block" });
     }
+
+
   });
+
   $(content).on("keydown", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
